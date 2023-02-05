@@ -1,4 +1,5 @@
 asgiref==3.6.0
+autopep8==2.0.1
 certifi==2022.12.7
 cffi==1.15.1
 charset-normalizer==3.0.1
@@ -13,6 +14,7 @@ django-templated-mail==1.1.1
 djangorestframework==3.14.0
 djangorestframework-simplejwt==4.8.0
 djoser==2.1.0
+drf-nested-routers==0.93.4
 idna==3.4
 itypes==1.2.0
 Jinja2==3.1.2
@@ -20,6 +22,7 @@ Markdown==3.4.1
 MarkupSafe==2.1.2
 oauthlib==3.2.2
 psycopg2==2.9.5
+pycodestyle==2.10.0
 pycparser==2.21
 PyJWT==2.6.0
 python3-openid==3.2.0
@@ -30,6 +33,7 @@ six==1.16.0
 social-auth-app-django==4.0.0
 social-auth-core==4.3.0
 sqlparse==0.4.3
+tomli==2.0.1
 tzdata==2022.7
 uritemplate==4.1.1
 urllib3==1.26.14
