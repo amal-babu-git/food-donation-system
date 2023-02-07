@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class Donation(models.Model):
+class Order(models.Model):
     FOOD_TYPE_VEG = 'V'
     FOOD_TYPE_NON_VEG = 'N'
 
@@ -20,10 +20,7 @@ class Donation(models.Model):
     quantity = models.PositiveSmallIntegerField()
     contact = models.CharField(max_length=14)
     address = models.TextField()
-    is_ordered = models.BooleanField(default=False)
-    remark=models.CharField(max_length=255,null=True,blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    
-    def __str__(self) -> str:
-        return self.food_name+" added by "+self.user
 
+    def __str__(self) -> str:
+        return self.food_name

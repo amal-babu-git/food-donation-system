@@ -69,6 +69,7 @@ INSTALLED_APPS = [
 
     'users',
     'donar',
+    'agent',
 
 ]
 

@@ -7,8 +7,13 @@ from . import serializers
 
 
 class DonationViewSet(ModelViewSet):
-    serializer_class = serializers.DonationSerializer
+    http_method_names = ['get', 'post', 'put', 'delete', 'head', 'options']
     permission_classes = [IsAuthenticated]
+
+    def get_serializer_class(self, *args, **kwargs):
+        if self.request.method == 'PUT':
+            return serializers.UpdateDonationSerializer
+        return serializers.DonationSerializer
 
     def get_queryset(self):
         user = self.request.user
