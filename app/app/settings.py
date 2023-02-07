@@ -48,6 +48,8 @@ CSRF_TRUSTED_ORIGINS = [
     # 'https://*.amalbabudev.in/',
     # 'http://*.amalbabudev.in',
     "http://localhost:3000",
+    "http://*localhost:3000",
+    "http://127.0.0.1:3000",
 ]
 
 
@@ -60,18 +62,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
     'corsheaders',
     'djoser',
-    
+
     'users',
-    
+    'donar',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -121,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
-    
+
 ]
 
 
@@ -172,8 +176,8 @@ REST_FRAMEWORK = {
 }
 
 # custom domain for send djosor verification link !
-# DOMAIN = 'onshop.amalbabudev.in'
-# SITE_NAME = 'onshop'
+DOMAIN = 'localhost:3000'
+SITE_NAME = 'Warm Hug'
 
 DJOSER = {
     'LOGIN_FIELD': 'email',

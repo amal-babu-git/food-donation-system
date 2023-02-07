@@ -8,7 +8,7 @@ from typing import Sequence
 
 @admin.register(models.User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['email','full_name','user_type']
+    list_display = ['email','full_name','user_type','is_active',]
 
     search_fields = ['full_name', 'email']
-    list_editable: Sequence[str] = ['full_name','user_type']
+    list_editable: Sequence[str] = ['full_name','user_type','is_active']

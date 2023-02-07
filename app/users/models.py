@@ -46,7 +46,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=50, unique=True)
     phone = models.CharField(max_length=12, unique=True, blank=True, null=True)
     full_name = models.CharField(max_length=50)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     user_type = models.CharField(
         max_length=2, choices=USER_TYPE_CHOICES, default=USER_TYPE_DONAR)
@@ -59,4 +59,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.email
-    pass
