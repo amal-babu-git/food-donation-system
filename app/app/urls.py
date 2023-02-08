@@ -23,4 +23,5 @@ urlpatterns = [
     path('auth/', include('djoser.urls.jwt')),
     path('user/', include('users.urls')),
     path('donation/', include('donar.urls')),
+    path('agent/', include('agent.urls')),
 ]

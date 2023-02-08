@@ -20,7 +20,7 @@ class DonationViewSet(ModelViewSet):
         if user.user_type == 'A':
             return models.Donation.objects.all()
         elif user.user_type == 'D':
-            return models.Donation.objects.filter(user_id=user.id)
+            return models.Donation.objects.filter(user_id=user.id).order_by('-id')
 
     def get_serializer_context(self):
         user_id = self.request.user.id
