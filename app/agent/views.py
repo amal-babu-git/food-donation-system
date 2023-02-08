@@ -13,3 +13,4 @@ class BookedDonationViewSet(ModelViewSet):
         return {
             'user_id': self.request.user.id
         }
+

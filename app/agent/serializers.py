@@ -1,11 +1,11 @@
 from rest_framework import serializers
 from . import models
-from donar.serializers import DonationSerializer
+from donar.serializers import DonationSerializer, UpdateDonationSerializer,SimpleDonationSerializer
 
 
 class BookedDonationSerializer(serializers.ModelSerializer):
     user = serializers.CharField(read_only=True)
-    donation = DonationSerializer(many=True)
+    donation = SimpleDonationSerializer()
 
     def create(self, validated_data):
         user_id = self.context['user_id']
@@ -14,4 +14,4 @@ class BookedDonationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.BookedDonation
-        fields = ['id', 'booked_at', 'donation', 'user']
+        fields = ['id', 'booked_at', 'donation','user']

@@ -26,4 +26,4 @@ class Donation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return self.food_name+" added by "+self.user
+        return self.food_name +" donated by "+ str(self.user) +"(DONAR)"
