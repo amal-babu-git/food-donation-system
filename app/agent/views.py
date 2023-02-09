@@ -30,7 +30,7 @@ class OrderViewSet(ModelViewSet):
 
     def get_permissions(self):
         # only agent
-        if self.request.user.user_type == 'A':
+        if self.request.user and self.request.user.user_type == 'A':
             return [IsAuthenticated()]
         return [IsAdminUser()]
 

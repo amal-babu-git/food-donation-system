@@ -9,9 +9,9 @@ router.register(prefix='booking',
                 basename='booking'
                 )
 # FIXME :temp
-router.register(prefix='order',
+router.register(prefix='orders',
                 viewset=views.OrderViewSet,
-                basename='order'
+                basename='orders'
                 )
 
 urlpatterns = router.urls
