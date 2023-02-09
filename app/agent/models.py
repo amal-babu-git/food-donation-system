@@ -23,6 +23,7 @@ class BookedItem(models.Model):
 class Order(models.Model):
     booked_at = models.DateTimeField(auto_now_add=True, null=True,blank=True)
     food_details=models.TextField(null=True,blank=True)
+    donar_details=models.TextField(null=True,blank=True)
     is_collected = models.BooleanField(default=False)
     donar_contact=models.CharField(max_length=14,null=True,blank=True)
     user=models.ForeignKey(User,on_delete=models.CASCADE)

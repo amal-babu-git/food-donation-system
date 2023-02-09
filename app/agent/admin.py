@@ -10,5 +10,5 @@ from . import models
 #     list_display=['id','booked_at','user']
 @admin.register(models.Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display=['id','booked_at','food_details','donar_contact','is_collected','user',]
+    list_display=['id','booked_at','food_details','donar_details','donar_contact','is_collected','user',]
     list_editable=['is_collected']

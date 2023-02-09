@@ -34,4 +34,4 @@ class OrderSerializer(serializers.ModelSerializer):
         return models.Order.objects.create(user_id=user_id, **validated_data)
     class Meta:
         model=models.Order
-        fields=['id','user','food_details','is_collected','donar_contact']
+        fields=['id','user','food_details','donar_details','is_collected','donar_contact']
