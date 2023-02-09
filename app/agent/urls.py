@@ -8,5 +8,10 @@ router.register(prefix='booking',
                 viewset=views.BookedDonationViewSet,
                 basename='booking'
                 )
+# FIXME :temp
+router.register(prefix='order',
+                viewset=views.OrderViewSet,
+                basename='order'
+                )
 
 urlpatterns = router.urls

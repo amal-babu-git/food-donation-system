@@ -5,6 +5,10 @@ from . import models
 
 
 
-@admin.register(models.BookedDonation)
-class AgentAdmin(admin.ModelAdmin):
-    list_display=['id','booked_at','donation','user']
+# @admin.register(models.BookedDonation)
+# class AgentAdmin(admin.ModelAdmin):
+#     list_display=['id','booked_at','user']
+@admin.register(models.Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display=['id','booked_at','food_details','donar_contact','is_collected','user',]
+    list_editable=['is_collected']
