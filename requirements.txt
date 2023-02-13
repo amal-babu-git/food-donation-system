@@ -38,3 +38,4 @@ tomli==2.0.1
 tzdata==2022.7
 uritemplate==4.1.1
 urllib3==1.26.14
+uWSGI>=2.0.21
