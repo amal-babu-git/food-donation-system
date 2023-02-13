@@ -39,18 +39,17 @@ if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOWED_ORIGINS = [
-        # FIXME: remove localhost later
         "http://127.0.0.1:3000",
-        "http://localhost:3000",
+        "https://food-donation-new.web.app",
+        "https://fooddonation.amalbabudev.in",
+        "http://onshopweb.web.app",
+        "https://api.fooddonation.amalbabudev.in",
+        "https://*.amalbabudev.in",
     ]
 
+CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
-    # 'https://*.amalbabudev.in/',
-    # 'http://*.amalbabudev.in',
-    "http://localhost:3000",
-    "http://*localhost:3000",
-    "http://127.0.0.1:3000",
-]
+    'https://api.fooddonation.amalbabudev.in/', 'https://*.amalbabudev.in/', 'https://*.amazonaws.com', 'http://*.amalbabudev.in']
 
 
 # Application definition
