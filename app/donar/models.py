@@ -23,7 +23,8 @@ class Donation(models.Model):
     is_booked = models.BooleanField(default=False)
     is_collected = models.BooleanField(default=False)
     remark = models.CharField(max_length=255, null=True, blank=True)
+    post_at = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return self.food_name +" donated by "+ str(self.user) +"(DONAR)"
+        return self.food_name + " donated by " + str(self.user) + "(DONAR)"

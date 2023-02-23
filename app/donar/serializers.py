@@ -13,7 +13,7 @@ class DonationSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Donation
         fields = ['id', 'food_name', 'food_type', 'quantity', 'contact',
-                  'address', 'is_booked', 'is_collected', 'remark', 'user']
+                  'address', 'is_booked', 'is_collected', 'remark', 'user','post_at',]
         
 
 
