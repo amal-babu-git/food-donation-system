@@ -26,7 +26,7 @@ class OrderViewSet(ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        return Order.objects.filter(user_id=user.id)
+        return Order.objects.filter(user_id=user.id).order_by('-booked_at')
 
     def get_permissions(self):
         # only agent

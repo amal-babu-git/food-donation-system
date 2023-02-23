@@ -21,7 +21,7 @@ class BookedItem(models.Model):
      
 # FIXME TODO temporary solution for Agent
 class Order(models.Model):
-    booked_at = models.DateTimeField(auto_now_add=True, null=True,blank=True)
+    booked_at = models.DateTimeField(auto_now=True, null=True,blank=True)
     food_details=models.TextField(null=True,blank=True)
     donar_details=models.TextField(null=True,blank=True)
     is_collected = models.BooleanField(default=False)
