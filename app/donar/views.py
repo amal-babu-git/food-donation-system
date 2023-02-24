@@ -27,3 +27,14 @@ class DonationViewSet(ModelViewSet):
         return {
             'user_id': user_id
         }
+
+
+# TODO: not implemented, working
+class NotificationViewSet(ModelViewSet):
+    serializer_class = serializers.NotificationSerializer
+    
+    permission_classes=[IsAuthenticated]
+
+    def get_queryset(self):
+        return models.Notification.objects.filter().order_by('-id')
+    

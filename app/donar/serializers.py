@@ -29,3 +29,9 @@ class SimpleDonationSerializer(serializers.ModelSerializer):
         model = models.Donation
         fields = ['id', 'food_name', 'food_type', 'quantity', 'contact',
                   'address', 'is_booked', 'is_collected', 'remark', 'user']
+
+# TODO: not implemented, working
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=models.Notification
+        fields=['notification','time']

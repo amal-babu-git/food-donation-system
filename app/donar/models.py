@@ -28,3 +28,10 @@ class Donation(models.Model):
 
     def __str__(self) -> str:
         return self.food_name + " donated by " + str(self.user) + "(DONAR)"
+
+
+# TODO: not implemented, working
+class Notification(models.Model):
+    notification = models.CharField(max_length=255)
+    time = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
