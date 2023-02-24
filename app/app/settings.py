@@ -56,6 +56,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 INSTALLED_APPS = [
     'jazzmin',
+    # 'django_admin_tailwind',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,7 +71,6 @@ INSTALLED_APPS = [
     'users',
     'donar',
     'agent',
-
 ]
 
 MIDDLEWARE = [

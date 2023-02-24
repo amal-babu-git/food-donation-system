@@ -23,7 +23,7 @@ class Donation(models.Model):
     is_booked = models.BooleanField(default=False)
     is_collected = models.BooleanField(default=False)
     remark = models.CharField(max_length=255, null=True, blank=True)
-    post_at = models.DateTimeField(auto_now=True)
+    post_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self) -> str:

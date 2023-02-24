@@ -18,7 +18,7 @@ class DonationViewSet(ModelViewSet):
     def get_queryset(self):
         user = self.request.user
         if user.user_type == 'A':
-            return models.Donation.objects.all()
+            return models.Donation.objects.all().order_by('-id')
         elif user.user_type == 'D':
             return models.Donation.objects.filter(user_id=user.id).order_by('-id')
 
